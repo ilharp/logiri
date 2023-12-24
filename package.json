@@ -1,0 +1,13 @@
+{
+  "name": "logiri-workspace",
+  "version": "0.0.0",
+  "packageManager": "yarn@1.22.19",
+  "repository": "https://github.com/ilharp/logiri.git",
+  "author": {
+    "name": "Il Harper",
+    "email": "hi@ilharper.com",
+    "url": "https://ilharper.com"
+  },
+  "license": "MIT",
+  "private": true
+}
