@@ -24,7 +24,9 @@ export class LogiriMessager {
 
   flush = async () => {
     if (!this.children.length) return
-    this.results.push(this.children.join(''))
+    this.results.push(
+      this.children.join('').replace(/\r/g, '').replace(/\n/g, ' '),
+    )
     this.children = []
   }
 
