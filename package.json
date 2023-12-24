@@ -24,6 +24,9 @@
     "plugins/*",
     "plugins/@*/*"
   ],
+  "scripts": {
+    "build": "yarn workspace logiri build"
+  },
   "devDependencies": {
     "@tsconfig/strictest": "^2.0.2",
     "@types/jest": "^29.5.11",
