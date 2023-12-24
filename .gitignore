@@ -138,6 +138,7 @@ build/
 lib/
 dist/
 esm/
+cjs/
 
 # Temp files
 tmp/
