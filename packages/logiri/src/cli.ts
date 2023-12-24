@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import type { Opcode, ServerPayload } from '@satorijs/protocol'
 import { WebSocket } from 'ws'
 import { Logiri } from './logiri.js'
 import { logiriMessageCreated } from './parser.js'
@@ -26,12 +27,9 @@ ws.on('close', (code) => console.log(`ws closed: ${code}`))
 
 // eslint-disable-next-line @typescript-eslint/no-misused-promises
 ws.on('message', async (raw) => {
-  const data = JSON.parse((raw as Buffer).toString()) as {
-    op: 0 | 2 | 4
-    body: unknown
-  }
-  if (data.op !== 0) return
-  const result = await lo.parse(data.body as object)
+  const data = JSON.parse((raw as Buffer).toString()) as ServerPayload
+  if (data.op !== (0 as Opcode.EVENT)) return
+  const result = await lo.parse(data.body)
   if (result) for (const line of result) console.log(line)
 })
 
