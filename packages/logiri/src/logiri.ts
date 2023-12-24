@@ -13,6 +13,6 @@ export class Logiri {
       if (result) return result
     }
 
-    return null
+    return []
   }
 }

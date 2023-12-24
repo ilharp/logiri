@@ -30,7 +30,7 @@ ws.on('message', async (raw) => {
   const data = JSON.parse((raw as Buffer).toString()) as ServerPayload
   if (data.op !== (0 as Opcode.EVENT)) return
   const result = await lo.parse(data.body)
-  if (result) for (const line of result) console.log(line)
+  result.forEach((line) => console.log(line))
 })
 
 ws.on('open', () => {
