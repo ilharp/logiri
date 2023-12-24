@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import { WebSocket } from 'ws'
-import { Logiri } from './logiri'
-import { logiriMessageCreated } from './parser'
+import { Logiri } from './logiri.js'
+import { logiriMessageCreated } from './parser.js'
 
 const url = new URL(process.argv[2] as string)
 

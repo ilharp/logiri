@@ -1,4 +1,4 @@
-import type { LogiriParser } from './types'
+import type { LogiriParser } from './types.js'
 
 export class Logiri {
   private parsers: LogiriParser[] = []
