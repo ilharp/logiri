@@ -14,6 +14,13 @@
   "main": "cjs/index.js",
   "module": "esm/index.js",
   "typings": "esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./cjs/index.js",
+      "import": "./esm/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "bin": {
     "logiri": "esm/cli.js"
   },
