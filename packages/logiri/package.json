@@ -1,6 +1,6 @@
 {
   "name": "logiri",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "从终端连接 Satori。",
   "repository": "https://github.com/ilharp/logiri.git",
   "author": {
